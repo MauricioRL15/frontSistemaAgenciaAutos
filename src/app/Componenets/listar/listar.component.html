@@ -9,7 +9,7 @@
             <th scope="col">Eslogan</th>
             <th scope="col">Actualizar</th>
             <th scope="col">Eliminar</th>
-            <th scope="col">Ver Modelos</th>
+            <th scope="col">Agregar Modelo</th>
         </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
                 <td>{{marca.eslogan}}</td>
                 <td><a class="btn btn-outline-warning"><span class="material-icons" (click)="abrirCompEditarEnviarId(marca)">autorenew</span></a></td>
                 <td><a class="btn btn-outline-danger"><span class="material-icons" (click)="abrirCompEliminarEnviarId(marca)">delete_outline</span></a></td>
-                <td><a class="btn btn-outline-success"><span class="material-icons">visibility</span></a></td>
+                <td><a class="btn btn-outline-success"><span class="material-icons" (click)="abrirComGuardarModelo()">add</span></a></td>
             </tr>
         </tbody>
   </table>

@@ -1,0 +1,15 @@
+#carouselExampleIndicators {
+    max-width: 800px;
+    max-height: 500px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+#carouselExampleIndicators .carousel-item img 
+{ 
+    width: 100%; 
+    height: 500px;
+    object-fit: cover; 
+}
+  

@@ -1,11 +1,11 @@
 <div class="container">
     <h5>Captura la información de la nueva Marca.</h5>
     <h6 class="text-end">Los campos con (*) son obligatorios.</h6>
-    <form (ngSubmit)="guardar()">
-        <div class="mb-3">
+    <form>
+        <!-- <div class="mb-3">
             <label for="idMarca" class="form-label">ID Marca</label>
             <input type="number" class="form-control" id="idMarca" [(ngModel)]="marca.idMarca" name="idMarca" disabled readonly>
-        </div>
+        </div> -->
         <div class="mb-3"> 
             <label for="nombre" class="form-label">Nombre *</label> 
             <input type="text" class="form-control" id="nombre" [(ngModel)]="marca.nombre" name="nombre" required> 
@@ -22,6 +22,6 @@
             <div id="esloganHelp" class="form-text">Ingrese el eslogan de la marca (opcional).</div> 
         </div>
 
-        <button type="submit" class="btn btn-dark">Guardar</button>
+        <button type="submit" class="btn btn-dark" (click)="guardar()">Guardar</button>
     </form>
 </div>

@@ -18,4 +18,11 @@ export class AppComponent {
     this.router.navigate(['guardarMarca']);
   }
 
+  listarComGuardarModelo(){
+    this.router.navigate(['listarModelo']);
+  }
+
+  abrirComGuardarModelo(){
+    this.router.navigate(['guardarModelo']);
+  }
 }

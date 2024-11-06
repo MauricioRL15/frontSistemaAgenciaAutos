@@ -9,17 +9,17 @@
         <div class="mb-3"> 
             <label for="nombre" class="form-label">Nombre *</label> 
             <input type="text" class="form-control" id="nombre" [(ngModel)]="marca.nombre" name="nombre" required> 
-            <div id="nombreHelp" class="form-text">Ingrese el nombre de la marca.</div> 
+            <div id="nombreHelp" class="form-text">Ingrese el nuevo nombre de la marca.</div> 
         </div>
         <div class="mb-3"> 
             <label for="origen" class="form-label">Origen *</label> 
             <input type="text" class="form-control" id="origen" [(ngModel)]="marca.origen" name="origen" required> 
-            <div id="origenHelp" class="form-text">Ingrese el origen de la marca.</div>
+            <div id="origenHelp" class="form-text">Ingrese el nuevo origen de la marca.</div>
         </div>
         <div class="mb-3"> 
             <label for="eslogan" class="form-label">Eslogan</label> 
             <input type="text" class="form-control" id="eslogan" [(ngModel)]="marca.eslogan" name="eslogan"> 
-            <div id="esloganHelp" class="form-text">Ingrese el eslogan de la marca (opcional).</div> 
+            <div id="esloganHelp" class="form-text">Ingrese el nuevo eslogan de la marca (opcional).</div> 
         </div>
 
         <button type="submit" class="btn btn-dark" (click)="editar()">Actualizar</button>

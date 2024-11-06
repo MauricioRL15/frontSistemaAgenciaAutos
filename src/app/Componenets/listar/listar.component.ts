@@ -32,4 +32,8 @@ export class ListarComponent {
     this.router.navigate(["eliminarMarca"]);
   }
 
+  abrirComGuardarModelo(){
+    this.router.navigate(['guardarModelo']);
+  }
+
 }
