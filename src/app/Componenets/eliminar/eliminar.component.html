@@ -1,0 +1,23 @@
+<div class="container">
+    <h5>Captura la actualización de la Marca.</h5>
+    <form>
+        <div class="mb-3">
+            <label for="idMarca" class="form-label">ID Marca</label>
+            <input type="number" class="form-control" id="idMarca" [(ngModel)]="m.idMarca" name="idMarca" disabled readonly>
+        </div>
+        <div class="mb-3"> 
+            <label for="nombre" class="form-label">Nombre *</label> 
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="m.nombre" name="nombre" required readonly> 
+        </div>
+        <div class="mb-3"> 
+            <label for="origen" class="form-label">Origen *</label> 
+            <input type="text" class="form-control" id="origen" [(ngModel)]="m.origen" name="origen" required readonly> 
+        </div>
+        <div class="mb-3"> 
+            <label for="eslogan" class="form-label">Eslogan</label> 
+            <input type="text" class="form-control" id="eslogan" [(ngModel)]="m.eslogan" name="eslogan" readonly> 
+        </div>
+
+        <button type="submit" class="btn btn-dark" (click)="eliminar()">Eliminar</button>
+    </form>
+</div>

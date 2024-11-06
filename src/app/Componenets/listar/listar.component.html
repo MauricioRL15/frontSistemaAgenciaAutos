@@ -1,0 +1,28 @@
+<div class="container">
+    <h5>Lista de Marcas</h5>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Origen</th>
+            <th scope="col">Eslogan</th>
+            <th scope="col">Actualizar</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Ver Modelos</th>
+        </tr>
+        </thead>
+        <tbody>
+            <!-- Se declra un ciclo para mostrar los registros -->
+            <tr *ngFor="let marca of listarMarcas">
+                <th scope="row">{{marca.idMarca}}</th>
+                <td>{{marca.nombre}}</td>
+                <td>{{marca.origen}}</td>
+                <td>{{marca.eslogan}}</td>
+                <td><a class="btn btn-outline-warning"><span class="material-icons" (click)="abrirCompEditarEnviarId(marca)">autorenew</span></a></td>
+                <td><a class="btn btn-outline-danger"><span class="material-icons" (click)="abrirCompEliminarEnviarId(marca)">delete_outline</span></a></td>
+                <td><a class="btn btn-outline-success"><span class="material-icons">visibility</span></a></td>
+            </tr>
+        </tbody>
+  </table>
+</div>
