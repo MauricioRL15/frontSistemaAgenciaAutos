@@ -40,4 +40,21 @@ export class ServiceService {
     return this.http.get<Modelo[]>(this.urlModelo + "listar");
   }
 
+  guardarModelo(modelo: Modelo) { 
+    return this.http.post(this.urlModelo + "guardar", modelo, { responseType: 'text' }); 
+  }
+
+  editarModelo(modelo: Modelo) { 
+    return this.http.post(this.urlModelo + "editar", modelo, { responseType: 'text' }); 
+  }
+
+  obtenerModelo(modelo: Modelo) {
+    return this.http.post<Modelo>(this.urlModelo + "buscar", modelo); 
+  }
+  
+  eliminarModelo(modelo: Modelo){
+    return this.http.post(this.urlModelo + "eliminar", modelo, { responseType: 'text' }); 
+  }
+
+
 }

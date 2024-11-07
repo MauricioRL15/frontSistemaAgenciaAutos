@@ -23,4 +23,19 @@ export class ListarModeloComponent {
   }
 
 
+  irActualizar(modelo:Modelo){
+    localStorage.setItem("idModelo", modelo.idModelo.toString());
+    this.router.navigate(['editarModelo']);
+  }
+
+  eliminar(modelo : Modelo){
+    var r = confirm("¿Estas seguro?")
+    if(r== true){
+      this.servicio.eliminarModelo(modelo).subscribe(data => {
+        this.ngOnInit();
+      });
+    }
+  }
+
+
 }

@@ -14,6 +14,7 @@ import { HomeComponent } from './Componenets/home/home.component';
 import { ListarModeloComponent } from './Componenets/listar-modelo/listar-modelo.component';
 import { GuardarModeloComponent } from './Componenets/guardar-modelo/guardar-modelo.component';
 import { EditarModeloComponent } from './Componenets/editar-modelo/editar-modelo.component';
+import { Gurdar2ModeloComponent } from './Componenets/gurdar2-modelo/gurdar2-modelo.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { EditarModeloComponent } from './Componenets/editar-modelo/editar-modelo
     HomeComponent,
     ListarModeloComponent,
     GuardarModeloComponent,
-    EditarModeloComponent
+    EditarModeloComponent,
+    Gurdar2ModeloComponent
   ],
   imports: [
     BrowserModule,

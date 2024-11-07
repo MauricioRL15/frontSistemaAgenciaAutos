@@ -1,1 +1,48 @@
-<p>guardar-modelo works!</p>
+<div class="container">
+    <h5>Captura la información del nuevo Modelo.</h5>
+    <h6 class="text-end">Los campos con (*) son obligatorios.</h6>
+    <form #modeloForm="ngForm" (ngSubmit)="guardarModelos()">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre *</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="modelo.nombre" name="nombre" required >
+            <div *ngIf="modeloForm.submitted && modeloForm.controls['nombre'].invalid" class="text-danger">
+                El nombre es obligatorio.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo *</label>
+            <select class="form-control" id="tipo" [(ngModel)]="modelo.tipo" name="tipo" required>
+                <option value="" disabled selected>Selecciona un tipo</option>
+                <option value="Manual">MANUAL</option>
+                <option value="Automático">AUTOMÁTICO</option>
+            </select>
+            <div *ngIf="modeloForm.submitted && modeloForm.controls['tipo'].invalid" class="text-danger">
+                El tipo es obligatorio.
+            </div>
+        </div>        
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio *</label>
+            <input type="number" class="form-control" id="precio" [(ngModel)]="modelo.precio" name="precio" required>
+            <div *ngIf="modeloForm.submitted && modeloForm.controls['precio'].invalid" class="text-danger">
+                El precio es obligatorio.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="fechaLanzamiento" class="form-label">Fecha de Lanzamiento *</label>
+            <input type="date" class="form-control" id="fechaLanzamiento" [(ngModel)]="modelo.fechaLanzamiento" name="fechaLanzamiento" required>
+            <div *ngIf="modeloForm.submitted && modeloForm.controls['fechaLanzamiento'].invalid" class="text-danger">
+                La fecha de lanzamiento es obligatoria.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="marca" class="form-label">Marca *</label>
+            <select class="form-control" id="idMarca" [(ngModel)]="marcas.idMarca" name="idMarca" required>
+                <option *ngFor="let m of listaMarcas" [value]="m.idMarca">{{ m.nombre }}</option>
+            </select>
+            <div *ngIf="modeloForm.submitted && modeloForm.controls['marca'].invalid" class="text-danger">
+                La marca es obligatoria.
+            </div>
+        </div>        
+        <button type="submit" class="btn btn-dark">Guardar</button>
+    </form>
+</div>
